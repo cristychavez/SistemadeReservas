@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemadeReservas.EntiadadesDeNegocio", "SistemadeReservas.EntiadadesDeNegocio\SistemadeReservas.EntiadadesDeNegocio.csproj", "{23755D09-B76D-46AB-80E6-2A84E5773D89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.EntidadesDeNegocio", "SistemadeReservas.EntiadadesDeNegocio\SistemadeReservas.EntidadesDeNegocio.csproj", "{23755D09-B76D-46AB-80E6-2A84E5773D89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemadeReservas.LogicaDeNenegocio", "SistemadeReservas.LogicaDeNenegocio\SistemadeReservas.LogicaDeNenegocio.csproj", "{7653EBD6-5704-4EA7-A712-E48EA067576C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.LogicaDeNenegocio", "SistemadeReservas.LogicaDeNenegocio\SistemadeReservas.LogicaDeNenegocio.csproj", "{7653EBD6-5704-4EA7-A712-E48EA067576C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemadeReservas.AccesoADatos", "SistemadeReservas.AccesoADatos\SistemadeReservas.AccesoADatos.csproj", "{0B40C411-09CB-4D8D-9FE5-AAA54943EA4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.AccesoADatos", "SistemadeReservas.AccesoADatos\SistemadeReservas.AccesoADatos.csproj", "{0B40C411-09CB-4D8D-9FE5-AAA54943EA4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemadeReservas.PruebasUnitarias", "SistemadeReservas.PruebasUnitarias\SistemadeReservas.PruebasUnitarias.csproj", "{075DD3FC-65CD-415B-A4E4-6CE06781EED0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.PruebasUnitarias", "SistemadeReservas.PruebasUnitarias\SistemadeReservas.PruebasUnitarias.csproj", "{075DD3FC-65CD-415B-A4E4-6CE06781EED0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemadeReservas.WebAPI", "SistemadeReservas.WebAPI\SistemadeReservas.WebAPI.csproj", "{0F4BB207-0852-4542-9B35-7DDAF74B73CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.WebAPI", "SistemadeReservas.WebAPI\SistemadeReservas.WebAPI.csproj", "{0F4BB207-0852-4542-9B35-7DDAF74B73CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
