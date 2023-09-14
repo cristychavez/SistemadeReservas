@@ -87,7 +87,7 @@ namespace SistemadeReservas.AccesoADatos
             var usuario = new Usuario();
             using (var bdContexto = new BDContexto())
             {
-                usuario = await bdContexto.Usuario.FirstDefaultAsync(static => s.Id == pUsuario.Id);
+                usuario = await bdContexto.Usuario.FirstDefaultAsync(s => s.Id == pUsuario.Id);
             }
             return usuario;
         }
