@@ -33,15 +33,15 @@ namespace SistemadeReservas.EntiadadesDeNegocio
         [MaxLength(200, ErrorMessage = "El largo máximo es 20 caracteres")]
         public string Fecha { get; set; }
 
-        [Required(ErrorMessage = "La persona es requerida")]
+        [Required(ErrorMessage = "Las personas son requeridos")]
         [MaxLength(200, ErrorMessage = "El largo máximo es 20 caracteres")]
-        public string Persona { get; set; }
+        public string Personas { get; set; }
 
-        [Required(ErrorMessage = "La horario entrada es requerida")]
+        [Required(ErrorMessage = "El horario entrada es requerido")]
         [MaxLength(200, ErrorMessage = "El largo máximo es 20 caracteres")]
         public string HorarioEntrada { get; set; }
 
-        [Required(ErrorMessage = "La horario salida es requerida")]
+        [Required(ErrorMessage = "El horario salida es requerido")]
         [MaxLength(200, ErrorMessage = "El largo máximo es 20 caracteres")]
         public string HorarioSalida { get; set; }
 
