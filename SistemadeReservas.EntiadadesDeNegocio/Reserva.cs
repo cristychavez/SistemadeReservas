@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponenModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace SistemadeReservas.EntiadadesDeNegocio
 {
     public class Reserva
     {
+        public string? idServicio;
+
         [Key]
         public int Id { get; set; }
 
@@ -48,8 +51,7 @@ namespace SistemadeReservas.EntiadadesDeNegocio
 
         [NotMapped]
         public int Top_Aux { get; set; }
-        public Departamento Departamento { get; set; }
-
-
+        public Mesa Mesa { get; set; }
+        public object IdServicio { get; set; }
     }
 }

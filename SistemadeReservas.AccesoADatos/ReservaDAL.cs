@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SistemadeReservas.EntiadadesDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace SistemadeReservas.AccesoADatos
                 var reserva = await bdContexto.Reserva.FirstOrDefaultAsync(s => s.Id == pReserva.Id);
                 reserva.Id = pReserva.Id;
                 reserva.IdMesa = pReserva.IdMesa;
-                reserva.idServicio = pReserva.idServicio;
+                reserva.IdServicio = pReserva.IdServicio;
                 reserva.Cliente = pReserva.Cliente;
                 reserva.Telefono = pReserva.Telefono;
                 reserva.Fecha = pReserva.Fecha;
@@ -73,8 +74,6 @@ namespace SistemadeReservas.AccesoADatos
         {
             if (pReserva.Id > 0)
                 pQuery = pQuery.Where(s => s.Id == pReserva.Id);
-            if (pReserva.Id > 0)
-                pQuery = pQuery.Where(s => s.Id == pReserva.Id);
             if (!string.IsNullOrWhiteSpace(pReserva.IdMesa))
                 pQuery = pQuery.Where(s => s.IdMesa.Contains(pReserva.IdMesa));
             if (!string.IsNullOrWhiteSpace(pReserva.idServicio))
@@ -107,16 +106,16 @@ namespace SistemadeReservas.AccesoADatos
             return reservas;
         }
         // solo esto va arreglar//
-        public static async Task<List<Municipio>> BuscarIncluirDepartamentosAsync(Municipio pMunicipio)
+        public static async Task<List<Reserva>> BuscarIncluirDepartamentosAsync(Reserva pReserva)
         {
-            var municipios = new List<Municipio>();
+            var reservas = new List<Reserva>();
             using (var bdContexto = new BDContexto())
             {
-                var select = bdContexto.Municipio.AsQueryable();
-                select = QuerySelect(select, pMunicipio).Include(s => s.Departamento).AsQueryable();
-                municipios = await select.ToListAsync();
+                var select = bdContexto.Reserva.AsQueryable();
+                select = QuerySelect(select, pReserva).Include(s => s.IdMesa).AsQueryable();
+                reservas = await select.ToListAsync();
             }
-            return municipios;
+            return reservas;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using SistemadeReservas.EntiadadesDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -66,7 +68,7 @@ namespace SistemadeReservas.AccesoADatos
             if (pMesa.Id > 0)
                 pQuery = pQuery.Where(s => s.Id == pMesa.Id);
 
-            if (!string.IsNullOrWhiteSpace(pMesa.Nombre))
+            if (!string.IsNullOrWhiteSpace((string?)pMesa.Nombre))
                 pQuery = pQuery.Where(s => s.Nombre.Contains(pMesa.Nombre));
 
             pQuery = pQuery.OrderByDescending(s => s.Id).AsQueryable();

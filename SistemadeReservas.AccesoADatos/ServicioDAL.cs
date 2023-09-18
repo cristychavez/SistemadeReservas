@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace SistemadeReservas.AccesoADatos
 {
     public class ServicioDAL
     {
-        public static async Task<int> CrearAsync(Servicio pServicio)
+        public static async Task<int> CrearAsync(ServicioDAL pServicio)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
@@ -20,7 +21,7 @@ namespace SistemadeReservas.AccesoADatos
 
             return result;
         }
-        public static async Task<int> ModificarAsync(Servicio pServicio)
+        public static async Task<int> ModificarAsync(ServicioDAL pServicio)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
@@ -33,7 +34,7 @@ namespace SistemadeReservas.AccesoADatos
             }
             return result;
         }
-        public static async Task<int> EliminarAsync(Servicio pServicio)
+        public static async Task<int> EliminarAsync(ServicioDAL pServicio)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
@@ -44,7 +45,7 @@ namespace SistemadeReservas.AccesoADatos
             }
             return result;
         }
-        public static async Task<Servicio> ObtenerPorIdAsync(Servicio pServicio)
+        public static async Task<Servicio> ObtenerPorIdAsync(ServicioDAL pServicio)
         {
             var servicio = new Servicio();
             using (var bdContexto = new BDContexto())

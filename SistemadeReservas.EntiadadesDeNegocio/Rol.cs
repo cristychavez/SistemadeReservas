@@ -19,7 +19,7 @@ namespace SistemadeReservas.EntiadadesDeNegocio
 
         [NotMapped]
         public int top_aux { get; set; } //propiedad auxiliar
-
+        public int Top_Aux { get; set; }
         public List<Usuario> Usuarios { get; set; } //propiedad de navegación
    }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -60,6 +61,7 @@ namespace SistemadeReservas.EntiadadesDeNegocio
         [Compare("Password", ErrorMessage = "Password y confirmar password deben de ser iguales")]
         [Display(Name = "Confirmar password")]
         public string confirmPassword_aux { get; set; }
+        public object IdRol { get; set; }
     }
 
     public enum Estatus_Usuario

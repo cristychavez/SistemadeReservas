@@ -8,5 +8,7 @@ namespace SistemadeReservas.EntiadadesDeNegocio
 {
     public class Mesa
     {
+        public object Id { get; set; }
+        public object Nombre { get; set; }
     }
 }
