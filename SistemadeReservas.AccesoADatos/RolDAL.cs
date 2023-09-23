@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SistemadeReservas.EntiadadesDeNegocio;
+using SistemadeReservas.EntidadesDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SistemadeReservas.EntiadadesDeNegocio;
+using SistemadeReservas.EntidadesDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,8 +74,13 @@ namespace SistemadeReservas.AccesoADatos
         {
             if (pReserva.Id > 0)
                 pQuery = pQuery.Where(s => s.Id == pReserva.Id);
-            if (!string.IsNullOrWhiteSpace(pReserva.IdMesa))
-                pQuery = pQuery.Where(s => s.IdMesa.Contains(pReserva.IdMesa));
+
+            if (pReserva.IdMesa > 0)
+                pQuery = pQuery.Where(s => s.IdMesa == pReserva.IdMesa);
+
+            if (pReserva.Id > 0)
+                pQuery = pQuery.Where(s => s.Id == pReserva.Id);
+
             if (!string.IsNullOrWhiteSpace(pReserva.idServicio))
                 pQuery = pQuery.Where(s => s.idServicio.Contains(pReserva.idServicio));
             if (!string.IsNullOrWhiteSpace(pReserva.Cliente))
@@ -94,7 +99,7 @@ namespace SistemadeReservas.AccesoADatos
             return pQuery;
         }
 
-        public static async Task<List<Reserva>> BuscarAsync(Reserva pMunicipio)
+        public static async Task<List<Reserva>> BuscarAsync(Reserva pReserva)
         {
             var reservas = new List<Reserva>();
             using (var bdContexto = new BDContexto())

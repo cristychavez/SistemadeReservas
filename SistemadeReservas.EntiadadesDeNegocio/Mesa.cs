@@ -13,17 +13,14 @@ namespace SistemadeReservas.EntidadesDeNegocio
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "El id es requerido")]
-        [MaxLength(30, ErrorMessage = "El largo máximo es de 30 caracteres")]
-        public string Id { get; set; }
-
         [Required(ErrorMessage = "El tipo es requerido")]
-        public byte Tipo { get; set; }
+        public string Tipo { get; set; }
 
         [Required(ErrorMessage = "El estado es requerido")]
-        public byte Estado { get; set; }
+        public string Estado { get; set; }
 
-       
-    
+        [NotMapped]
+        public int Top_Aux { get; set; }
+
     }
 }
