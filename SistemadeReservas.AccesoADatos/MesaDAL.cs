@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SistemadeReservas.EntiadadesDeNegocio;
+using SistemadeReservas.EntidadesDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +28,7 @@ namespace SistemadeReservas.AccesoADatos
             using (var bdContexto = new BDContexto())
             {
                 var mesa = await bdContexto.Mesa.FirstOrDefaultAsync(s => s.Id == pMesa.Id);
-                mesa.Nombre = pMesa.Nombre;
+                mesa.Tipo = pMesa.Tipo;
                 bdContexto.Update(mesa);
                 result = await bdContexto.SaveChangesAsync();
             }
@@ -68,12 +68,12 @@ namespace SistemadeReservas.AccesoADatos
             if (pMesa.Id > 0)
                 pQuery = pQuery.Where(s => s.Id == pMesa.Id);
 
-            if (!string.IsNullOrWhiteSpace((string?)pMesa.Nombre))
-                pQuery = pQuery.Where(s => s.Nombre.Contains(pMesa.Nombre));
+            if (!string.IsNullOrWhiteSpace((string?)pMesa.Tipo))
+                pQuery = pQuery.Where(s => s.Tipo.Contains(pMesa.Tipo));
 
             pQuery = pQuery.OrderByDescending(s => s.Id).AsQueryable();
 
-            if (pRol.Top_Aux > 0)
+            if (pMesa.Top_Aux > 0)
                 pQuery = pQuery.Take(pMesa.Top_Aux).AsQueryable();
 
             return pQuery;

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemadeReservas.EntiadadesDeNegocio
+namespace SistemadeReservas.EntidadesDeNegocio
 {
-    public class Servicios
+    public class Servicio
     {
         [Key]
         public int Id { get; set; }
@@ -19,5 +20,8 @@ namespace SistemadeReservas.EntiadadesDeNegocio
         [Required(ErrorMessage = "El estado es requerido")]
         [MaxLength(50, ErrorMessage = "El largo máximo es de 30 caracteres")]
         public string Estado { get; set; }
+
+        [NotMapped]
+        public int Top_Aux { get; set; }
     }
 }

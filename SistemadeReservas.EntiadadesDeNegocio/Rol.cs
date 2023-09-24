@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemadeReservas.EntiadadesDeNegocio
+namespace SistemadeReservas.EntidadesDeNegocio
 {
     public class Rol
     {
@@ -18,7 +18,6 @@ namespace SistemadeReservas.EntiadadesDeNegocio
         public string Nombre { get; set; }
 
         [NotMapped]
-        public int top_aux { get; set; } //propiedad auxiliar
         public int Top_Aux { get; set; }
         public List<Usuario> Usuarios { get; set; } //propiedad de navegación
    }

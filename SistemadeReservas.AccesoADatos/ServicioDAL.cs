@@ -5,11 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using SistemadeReservas.EntidadesDeNegocio;
+
 namespace SistemadeReservas.AccesoADatos
 {
     public class ServicioDAL
     {
-        public static async Task<int> CrearAsync(ServicioDAL pServicio)
+        public static async Task<int> CrearAsync(Servicio pServicio)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
@@ -21,7 +23,7 @@ namespace SistemadeReservas.AccesoADatos
 
             return result;
         }
-        public static async Task<int> ModificarAsync(ServicioDAL pServicio)
+        public static async Task<int> ModificarAsync(Servicio pServicio)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
@@ -34,7 +36,7 @@ namespace SistemadeReservas.AccesoADatos
             }
             return result;
         }
-        public static async Task<int> EliminarAsync(ServicioDAL pServicio)
+        public static async Task<int> EliminarAsync(Servicio pServicio)
         {
             int result = 0;
             using (var bdContexto = new BDContexto())
@@ -45,7 +47,7 @@ namespace SistemadeReservas.AccesoADatos
             }
             return result;
         }
-        public static async Task<Servicio> ObtenerPorIdAsync(ServicioDAL pServicio)
+        public static async Task<Servicio> ObtenerPorIdAsync(Servicio pServicio)
         {
             var servicio = new Servicio();
             using (var bdContexto = new BDContexto())
@@ -71,8 +73,8 @@ namespace SistemadeReservas.AccesoADatos
             if (!string.IsNullOrWhiteSpace(pServicio.Nombre))
                 pQuery = pQuery.Where(s => s.Nombre.Contains(pServicio.Nombre));
 
-            if (pServicio.Estado > 0)
-                pQuery = pQuery.Where(s => s.Id == pServicio.Estado);
+            if (!string.IsNullOrWhiteSpace(pServicio.Estado))
+                pQuery = pQuery.Where(s => s.Estado.Contains(pServicio.Estado));
 
             pQuery = pQuery.OrderByDescending(s => s.Id).AsQueryable();
 
