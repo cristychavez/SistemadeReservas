@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.EntidadesDeNegocio", "SistemadeReservas.EntiadadesDeNegocio\SistemadeReservas.EntidadesDeNegocio.csproj", "{23755D09-B76D-46AB-80E6-2A84E5773D89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.LogicaDeNenegocio", "SistemadeReservas.LogicaDeNenegocio\SistemadeReservas.LogicaDeNenegocio.csproj", "{7653EBD6-5704-4EA7-A712-E48EA067576C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.LogicaDeNegocio", "SistemadeReservas.LogicaDeNenegocio\SistemadeReservas.LogicaDeNegocio.csproj", "{7653EBD6-5704-4EA7-A712-E48EA067576C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemadeReservas.AccesoADatos", "SistemadeReservas.AccesoADatos\SistemadeReservas.AccesoADatos.csproj", "{0B40C411-09CB-4D8D-9FE5-AAA54943EA4B}"
 EndProject
